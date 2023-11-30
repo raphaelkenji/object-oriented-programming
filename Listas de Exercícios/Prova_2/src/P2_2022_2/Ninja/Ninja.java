@@ -1,6 +1,6 @@
 package P2_2022_2.Ninja;
 
-public class Ninja implements Treinamento, Comparable<Ninja> {
+public class Ninja implements Treinamento, Comparable {
     String cpf;
     String nome;
     int idade;
@@ -38,8 +38,9 @@ public class Ninja implements Treinamento, Comparable<Ninja> {
         return cpf + " / " + nome + " / " + idade;
     }
 
-    public int compareTo (Ninja n) {
+    @Override
+    public int compareTo(Object o) {
+        Ninja n = (Ninja) o;
         return Integer.compare(idade, n.idade);
     }
-
 }
