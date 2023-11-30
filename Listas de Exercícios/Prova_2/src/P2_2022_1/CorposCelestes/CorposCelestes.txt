@@ -1,0 +1,7 @@
+D1586#Jupiter Quente#340#P
+553-2#Proxima Centauri#4#E
+A789#Andromeda#2000000#P
+M123#Marte Frio#120#P
+P987#Plutão Distante#590#E
+S456#Sol Quente#0#E
+L001#Lua Gelada#384

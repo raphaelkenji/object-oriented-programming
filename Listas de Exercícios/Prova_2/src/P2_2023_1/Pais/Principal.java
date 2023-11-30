@@ -12,6 +12,8 @@ public class Principal {
         boolean x = Pais.exists(lista, pais);
         if (x) {
             System.out.println("Encontrado!\n" + lista.get(lista.indexOf(pais)).getNome() + "\n" + lista.get(lista.indexOf(pais)).getDimensao() + "\n" + lista.get(lista.indexOf(pais)).getFronteira());
+        } else {
+            System.out.println("Não encontrado!");
         }
 
         String[] str = {

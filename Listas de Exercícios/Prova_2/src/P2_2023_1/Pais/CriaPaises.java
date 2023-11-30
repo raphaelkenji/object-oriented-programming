@@ -25,7 +25,6 @@ public class CriaPaises {
         try {
             for (int i = 0; i < str.length; i++) {
                 String[] x = str[i].split("#");
-                System.out.println(x.length);
                 if (x.length < 3) {
                     throw new FormatoIncorretoException(x.length, str[i]);
                 }

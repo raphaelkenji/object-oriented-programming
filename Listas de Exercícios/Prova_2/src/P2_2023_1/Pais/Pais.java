@@ -1,6 +1,7 @@
 package P2_2023_1.Pais;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pais {
     String codigo;
@@ -69,6 +70,10 @@ public class Pais {
 
     public static boolean exists (ArrayList x, Object y) {
         return x.contains(y);
+    }
+
+    public String toString() {
+        return this.nome;
     }
 
 }
