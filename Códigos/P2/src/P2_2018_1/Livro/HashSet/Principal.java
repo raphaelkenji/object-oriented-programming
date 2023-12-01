@@ -1,4 +1,4 @@
-package P2_2018_1.Livro.GPT;
+package P2_2018_1.Livro.HashSet;
 
 public class Principal {
     public static void main(String[] args) {
@@ -7,6 +7,12 @@ public class Principal {
         carrinho.adicionaLivro(new Livro("123"));
         carrinho.adicionaLivro(new Livro("123"));
         carrinho.adicionaLivro(new Livro("333"));
+        carrinho.adicionaLivro(new Livro("123"));
+        carrinho.adicionaLivro(new Livro("123"));
+        carrinho.adicionaLivro(new Livro("123"));
+        carrinho.adicionaLivro(new Livro("123"));
+        carrinho.adicionaLivro(new Livro("123"));
+        carrinho.adicionaLivro(new Livro("123"));
 
         Utils.imprimeFrequencia(carrinho);
     }
