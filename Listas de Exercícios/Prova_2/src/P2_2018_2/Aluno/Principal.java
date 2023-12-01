@@ -21,9 +21,7 @@ public class Principal {
         Utils.ordena(listaAlunos);
 
         System.out.println("Alunos ordenados por nome:");
-        for (Aluno aluno : listaAlunos) {
-            System.out.println(aluno);
-        }
+        System.out.println(listaAlunos);
 
         Aluno aluno3 = new AlunoRegular("154-3");
         System.out.println("Existe aluno com ID 154-3 na lista? " + Utils.existe(listaAlunos, aluno3));
@@ -35,9 +33,7 @@ public class Principal {
         Map<String, Aluno> mapaAlunos = new Utils().retornaDados(conjuntoDados);
 
         System.out.println("\nMapa de alunos:");
-        for (Map.Entry<String, Aluno> entry : mapaAlunos.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
+        System.out.println(mapaAlunos);
     }
 }
 
