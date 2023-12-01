@@ -20,19 +20,15 @@ public class CriaPaises {
         return paises;
     }
 
-    public ArrayList<Pais> retornaPaises (String[] str) {
+    public ArrayList<Pais> retornaPaises (String[] str) throws FormatoIncorretoException {
         ArrayList<Pais> paises = new ArrayList<>();
-        try {
-            for (int i = 0; i < str.length; i++) {
-                String[] x = str[i].split("#");
-                if (x.length < 3) {
-                    throw new FormatoIncorretoException(x.length, str[i]);
-                }
-                Pais pais = new Pais(x[0], x[1], Double.parseDouble(x[2]));
-                paises.add(pais);
+        for (int i = 0; i < str.length; i++) {
+            String[] x = str[i].split("#");
+            if (x.length < 3) {
+                throw new FormatoIncorretoException(x.length, str[i]);
             }
-        } catch (FormatoIncorretoException e) {
-            System.out.println(e.getMessage());
+            Pais pais = new Pais(x[0], x[1], Double.parseDouble(x[2]));
+            paises.add(pais);
         }
         return paises;
     }

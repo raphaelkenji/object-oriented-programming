@@ -11,7 +11,7 @@ public class Principal {
         Pais pais = new Pais(scan.nextLine());
         boolean x = Pais.exists(lista, pais);
         if (x) {
-            System.out.println("Encontrado!\n" + lista.get(lista.indexOf(pais)).getNome() + "\n" + lista.get(lista.indexOf(pais)).getDimensao() + "\n" + lista.get(lista.indexOf(pais)).getFronteira());
+            System.out.println("Encontrado! MX" + lista.get(lista.indexOf(pais)).getNome() + " / " + lista.get(lista.indexOf(pais)).getDimensao() + " / " + lista.get(lista.indexOf(pais)).getFronteira());
         } else {
             System.out.println("Não encontrado!");
         }
@@ -22,7 +22,11 @@ public class Principal {
           "UK#Reino Unido",
         };
 
-        ArrayList<Pais> lista2 = new CriaPaises().retornaPaises(str);
-        System.out.println(lista2);
+        try {
+            ArrayList<Pais> lista2 = new CriaPaises().retornaPaises(str);
+            System.out.println(lista2);
+        } catch (FormatoIncorretoException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
