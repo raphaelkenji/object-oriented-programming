@@ -1,7 +1,6 @@
 package P2_2018_1.Livro;
 
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class Principal {
     public static void main(String[] args) {
@@ -22,5 +21,17 @@ public class Principal {
 
         int x = Collections.frequency(carrinho.getLista(), livro);
         System.out.println("Quantidade de vezes que o Livro com ID " + livro.getId() + " apareceu: " + x);
+
+        Iterator iterator = carrinho.getLista().iterator();
+        Map<String, Integer> mapa = new HashMap<>();
+        while (iterator.hasNext()) {
+            Livro livroc = (Livro) iterator.next();
+            if (mapa.containsKey(livroc.getId())) {
+                mapa.put(livroc.getId(), mapa.get(livroc.getId()) + 1);
+            } else {
+                mapa.put(livroc.getId(), 1);
+            }
+        }
+        System.out.println(mapa);
     }
 }
